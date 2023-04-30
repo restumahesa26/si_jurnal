@@ -19,9 +19,9 @@ class UserSeeder extends Seeder
     public function run()
     {
         User::create([
-            'nama' => 'Mufti Restu Mahesa',
+            'nama' => 'Admin',
             'role' => 'Admin',
-            'email' => 'mufti.restumahesa@gmail.com',
+            'email' => 'admin@gmail.com',
             'password' => Hash::make('password')
         ]);
 
@@ -38,17 +38,17 @@ class UserSeeder extends Seeder
             'user_id' => $guru->id
         ]);
 
-        $wali = User::create([
-            'nama' => 'Balqis Nabila',
+        $waka = User::create([
+            'nama' => 'Jokowi',
             'role' => 'Waka-Kurikulum',
-            'email' => 'assabillah@gmail.com',
+            'email' => 'jokowi@gmail.com',
             'password' => Hash::make('password')
         ]);
 
         WakaKurikulum::create([
             'nip' => '123456789101113',
             'jenis_kelamin' => 'P',
-            'user_id' => $guru->id
+            'user_id' => $waka->id
         ]);
     }
 }
