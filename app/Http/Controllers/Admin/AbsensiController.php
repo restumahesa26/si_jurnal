@@ -7,6 +7,7 @@ use App\Models\Absen;
 use App\Models\MataPelajaran;
 use App\Models\TahunAjaran;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AbsensiController extends Controller
 {
@@ -14,7 +15,11 @@ class AbsensiController extends Controller
     {
         $tahun_ajaran = TahunAjaran::where('status', 'Aktif')->first();
 
-        $mapel = MataPelajaran::join('kelas AS kelas', 'kelas.id', '=', 'mata_pelajaran.kelas_id')->where('kelas.tahun_ajaran_id', $tahun_ajaran->id)->get(['mata_pelajaran.*']);
+        if (Auth::user()->role == 'Admin') {
+            $mapel = MataPelajaran::join('kelas AS kelas', 'kelas.id', '=', 'mata_pelajaran.kelas_id')->where('kelas.tahun_ajaran_id', $tahun_ajaran->id)->get(['mata_pelajaran.*']);
+        } else {
+            $mapel = MataPelajaran::where('guru', Auth::user()->guru->nip)->get();
+        }
 
         return view('pages.admin.absensi.index', [
             'mapel' => $mapel

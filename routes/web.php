@@ -71,12 +71,6 @@ Route::middleware(['auth','admin'])
 
         Route::resource('waka-kurikulum', WakaKurikulumController::class);
 
-        Route::get('/data-absensi', [AdminAbsensiController::class, 'index'])->name('admin-absensi.index');
-
-        Route::get('/data-absensi/show', [AdminAbsensiController::class, 'show'])->name('admin-absensi.show');
-
-        Route::put('/data-absensi/update', [AdminAbsensiController::class, 'update'])->name('admin-absensi.update');
-
         Route::post('/data-absensi/delete', [AdminAbsensiController::class, 'delete'])->name('admin-absensi.delete');
 
         Route::get('/data-jurnal', [AdminJurnalController::class, 'index'])->name('admin-jurnal.index');
@@ -133,6 +127,12 @@ Route::middleware(['auth','adminguru'])
         Route::get('/laporan/cetak-jurnal-guru', [LaporanController::class, 'cetak_guru'])->name('laporan.cetak-jurnal-guru');
 
         Route::get('/laporan/cetak-jurnal-guru-excel', [LaporanController::class, 'cetak_guru_excel'])->name('laporan.cetak-jurnal-guru-excel');
+
+        Route::get('/data-absensi', [AdminAbsensiController::class, 'index'])->name('admin-absensi.index');
+
+        Route::get('/data-absensi/show', [AdminAbsensiController::class, 'show'])->name('admin-absensi.show');
+
+        Route::put('/data-absensi/update', [AdminAbsensiController::class, 'update'])->name('admin-absensi.update');
     });
 
 Route::middleware(['auth','adminkepalasekolah'])

@@ -13,7 +13,7 @@
                     <div class="card-body">
                         <div class="d-flex justify-content-between">
                             <div class="card-title">
-                                Silahkan Ubah Absensi Pertemuan ke-{{ $items->first()->pertemuan }}
+                                Silahkan Ubah Absensi Tanggal {{ \Carbon\Carbon::parse($items->first()->tanggal)->translatedFormat('d F Y') }}
                             </div>
                             <form action="{{ route('admin-absensi.delete') }}" method="POST">
                                 @csrf
@@ -21,9 +21,11 @@
                                     <input type="hidden" name="id[]" value="{{ $item->id }}">
                                     <input type="hidden" name="tanggal" value="{{ $item->tanggal }}">
                                 @endforeach
+                                @if (Auth::user()->role == 'Admin')
                                 <button type="submit" class="btn btn-danger btn-rounded btn-hapus">
                                     Hapus Daftar Hadir
                                 </button>
+                                @endif
                             </form>
                         </div>
                         <div class="text-dark">

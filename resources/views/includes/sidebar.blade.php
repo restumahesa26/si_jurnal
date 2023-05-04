@@ -72,6 +72,12 @@
                     <span class="menu-title">Absensi</span>
                 </a>
             </li>
+            <li class="nav-item @if(Route::is('admin-absensi.index') || Route::is('admin-absensi.show')) active @endif">
+                <a class="nav-link" href="{{ route('admin-absensi.index') }}">
+                    <span class="icon-bg"><i class="mdi mdi-monitor-multiple menu-icon"></i></span>
+                    <span class="menu-title">Ubah Absensi</span>
+                </a>
+            </li>
             <li class="nav-item @if(Route::is('laporan.*')) active @endif">
                 <a class="nav-link" href="{{ route('laporan.index2') }}">
                     <span class="icon-bg"><i class="mdi mdi-printer menu-icon"></i></span>

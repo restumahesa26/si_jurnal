@@ -11,7 +11,6 @@
             <div class="card-body">
                 <div class="card-title">
                     Daftar Mata Pelajaran Yang Diampu
-                    </ul>
                 </div>
                 <div class="row">
                     @forelse ($items as $item)

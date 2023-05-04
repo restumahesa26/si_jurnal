@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    SIAS | Absensi
+SIAS | Absensi
 @endsection
 
 @section('content')
@@ -22,7 +22,10 @@
                     @csrf
                     <div class="form-group">
                         <label for="topik_pembelajaran" class="text-dark">Topik Pembelajaran</label>
-                        <input type="text" name="topik_pembelajaran" class="form-control @error('topik_pembelajaran') is-invalid @enderror" id="topik_pembelajaran" placeholder="Masukkan Topik Pembelajaran" value="{{ old('topik_pembelajaran') }}" required>
+                        <input type="text" name="topik_pembelajaran"
+                            class="form-control @error('topik_pembelajaran') is-invalid @enderror"
+                            id="topik_pembelajaran" placeholder="Masukkan Topik Pembelajaran"
+                            value="{{ old('topik_pembelajaran') }}" required>
                         @error('topik_pembelajaran')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -54,17 +57,22 @@
                 @elseif ($check2 == 'Error')
                 <div class="form-group">
                     <label for="topik_pembelajaran" class="text-dark">Topik Pembelajaran</label>
-                    <input type="text" name="topik_pembelajaran" class="form-control @error('topik_pembelajaran') is-invalid @enderror" id="topik_pembelajaran" placeholder="Masukkan Topik Pembelajaran" value="{{ old('topik_pembelajaran', $item->getJurnal->topik_pembelajaran) }}" disabled>
+                    <input type="text" name="topik_pembelajaran"
+                        class="form-control @error('topik_pembelajaran') is-invalid @enderror" id="topik_pembelajaran"
+                        placeholder="Masukkan Topik Pembelajaran"
+                        value="{{ old('topik_pembelajaran', $item->getJurnal->topik_pembelajaran) }}" disabled>
                 </div>
                 <div class="form-group">
                     <label for="kegiatan_belajar" class="text-dark">Kegiatan Belajar</label>
                     <textarea name="kegiatan_belajar" id="kegiatan_belajar" cols="30" rows="10" class="form-control"
-                        disabled placeholder="Masukkan Kegiatan Belajar">{{ old('kegiatan_belajar', $item->getJurnal->kegiatan_belajar) }}</textarea>
+                        disabled
+                        placeholder="Masukkan Kegiatan Belajar">{{ old('kegiatan_belajar', $item->getJurnal->kegiatan_belajar) }}</textarea>
                 </div>
                 <div class="form-group">
                     <label for="kendala_belajar" class="text-dark">Kendala Belajar</label>
                     <textarea name="kendala_belajar" id="kendala_belajar" cols="30" rows="10" class="form-control"
-                        disabled placeholder="Masukkan Kendala Belajar">{{ old('kendala_belajar', $item->getJurnal->kendala_belajar) }}</textarea>
+                        disabled
+                        placeholder="Masukkan Kendala Belajar">{{ old('kendala_belajar', $item->getJurnal->kendala_belajar) }}</textarea>
                 </div>
                 @php
                 $check = $item->checkAbsen($item->id);
@@ -135,9 +143,9 @@
                                 <td>{{ $absen->kelasSiswa->siswa->nama }}</td>
                                 <td>
                                     @if ($absen->kelasSiswa->siswa->jenis_kelamin == 'L')
-                                            <i class="mdi mdi-human-male text-primary" style="font-size: 30px"></i>
+                                    <i class="mdi mdi-human-male text-primary" style="font-size: 30px"></i>
                                     @elseif ($absen->kelasSiswa->siswa->jenis_kelamin == 'P')
-                                        <i class="mdi mdi-human-female text-warning" style="font-size: 30px"></i>
+                                    <i class="mdi mdi-human-female text-warning" style="font-size: 30px"></i>
                                     @endif
                                 </td>
                                 <td>
@@ -159,7 +167,15 @@
                     </table>
                 </div>
                 <div class="text-center">
-                    <h4 class="text-success mt-3">Daftar Hadir Telah Disimpan, Silahkan Hubungi Admin Apabila Terdapat Kesalahan Dalam Pengisian Daftar Hadir</h4>
+                    <h4 class="text-success mt-3">Daftar Hadir Telah Disimpan, Apabila Ingin Mengubah Absen Klik Tombol
+                        <form action="{{ route('admin-absensi.show') }}" class="d-inline" method="GET">
+                            @csrf
+                            <input type="hidden" name="mapel_id" value="{{ $item->id }}">
+                            <input type="hidden" name="tanggal" value="{{ \Carbon\Carbon::parse(\Carbon\Carbon::now()) }}">
+                            <button type="submit" class="btn btn-primary">Ubah Absen</button>
+                        </form>
+                        Berikut
+                    </h4>
                 </div>
                 @endif
                 @endif
@@ -167,20 +183,46 @@
         </div>
     </div>
 </div>
+<div class="modal fade" id="modalUbahAbsen" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ubah Absen</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="{{ route('admin-absensi.show') }}">
+                @csrf
+                <input type="hidden" name="mapel_id" value="{{ $item->id }}">
+                <input type="hidden" name="tanggal" value="{{ \Carbon\Carbon::parse(\Carbon\Carbon::now()) }}">
+            </form>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
 
 @push('addon-script')
-    <script src="{{ url('js/sweetalert2.all.min.js') }}"></script>
+<script src="{{ url('js/sweetalert2.all.min.js') }}"></script>
 
-    @if(session()->has('success'))
-        <script>
-            Swal.fire({
-                icon: 'success',
-                title: 'Berhasil',
-                text: '{{ session()->get("success") }}',
-                showConfirmButton: false,
-                timer: 1500
-            })
-        </script>
-    @endif
+@if(session()->has('success'))
+<script>
+    Swal.fire({
+        icon: 'success',
+        title: 'Berhasil',
+        text: '{{ session()->get("success") }}',
+        showConfirmButton: false,
+        timer: 1500
+    })
+
+</script>
+@endif
 @endpush
