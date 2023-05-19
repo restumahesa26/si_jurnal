@@ -40,8 +40,10 @@
                     <th style="vertical-align : middle; text-align:center; width: 3%">No</th>
                     <th style="vertical-align : middle; text-align:center; width: 10%">Mata Pelajaran</th>
                     <th style="vertical-align : middle; text-align:center; width: 6%">Kelas</th>
-                    <th style="vertical-align : middle; text-align:center; width: 13%">Pertemuan</th>
-                    <th style="vertical-align : middle; text-align:center; width: 45%">Pokok Bahasan</th>
+                    <th style="vertical-align : middle; text-align:center; width: 13%">Tanggal</th>
+                    <th style="vertical-align : middle; text-align:center;">Topik Pembelajaran</th>
+                    <th style="vertical-align : middle; text-align:center;">Kegiatan Belajar</th>
+                    <th style="vertical-align : middle; text-align:center;">Kendala Belajar</th>
                     <th style="vertical-align : middle; text-align:center; width: 4%">Total Sakit</th>
                     <th style="vertical-align : middle; text-align:center; width: 4%">Total Izin</th>
                     <th style="vertical-align : middle; text-align:center; width: 4%">Total Alfa</th>
@@ -52,13 +54,15 @@
                 @forelse ($items as $item)
                 <tr>
                     <td style="vertical-align : middle; text-align:center;">{{ $loop->iteration }}</td>
-                    <td style="vertical-align : middle; text-align:center;">{{ $item->mataPelajaran->mata_pelajaran->nama_mata_pelajaran }}</td>
+                    <td style="vertical-align : middle; text-align:center;">{{ $item->mataPelajaran->nama_mata_pelajaran }}</td>
                     <td style="vertical-align : middle; text-align:center;">{{ $item->mataPelajaran->kelas->jenjang }} {{ $item->mataPelajaran->kelas->kelas }}</td>
-                    <td style="vertical-align : middle; text-align:center;">Ke - {{ $item->pertemuan }}</td>
-                    <td style="vertical-align : middle;">{{ $item->pokok_bahasan }}</td>
-                    <td style="vertical-align : middle; text-align:center;">{{ $item->hitungStatus('Sakit', $item->mapel_id, $item->pertemuan) }}</td>
-                    <td style="vertical-align : middle; text-align:center;">{{ $item->hitungStatus('Izin', $item->mapel_id, $item->pertemuan) }}</td>
-                    <td style="vertical-align : middle; text-align:center;">{{ $item->hitungStatus('Tanpa Keterangan', $item->mapel_id, $item->pertemuan) }}</td>
+                    <td style="vertical-align : middle; text-align:center;">{{ \Carbon\Carbon::parse($item->tanggal)->translatedFormat('d F Y') }}</td>
+                    <td style="vertical-align : middle;">{{ $item->topik_pembelajaran }}</td>
+                    <td style="vertical-align : middle;">{{ $item->kegiatan_belajar }}</td>
+                    <td style="vertical-align : middle;">{{ $item->kendala_belajar }}</td>
+                    <td style="vertical-align : middle; text-align:center;">{{ $item->hitungStatus('Sakit', $item->mapel_id, $item->tanggal) }}</td>
+                    <td style="vertical-align : middle; text-align:center;">{{ $item->hitungStatus('Izin', $item->mapel_id, $item->tanggal) }}</td>
+                    <td style="vertical-align : middle; text-align:center;">{{ $item->hitungStatus('Tanpa Keterangan', $item->mapel_id, $item->tanggal) }}</td>
                     <td style="vertical-align : middle; text-align:center;">{{ $item->persentaseKehadiran($item->mapel_id) }} %</td>
                 </tr>
                 @empty

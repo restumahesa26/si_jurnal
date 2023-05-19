@@ -13,7 +13,7 @@
                     <div class="card-body">
                         <div class="d-flex justify-content-between">
                             <div class="card-title">
-                                Silahkan Ubah Jurnal Pertemuan ke-{{ $item->pertemuan }}
+                                Silahkan Ubah Jurnal Pertemuan Hari {{ \Carbon\Carbon::parse($item->tanggal)->translatedFormat('l, d F Y') }}
                             </div>
                             <form action="{{ route('admin-jurnal.delete', $item->id) }}" method="POST">
                                 @csrf
@@ -26,7 +26,7 @@
                         <div class="text-dark">
                             <div class="row">
                                 <div class="col-md-2">Mata Pelajaran</div>
-                                <div class="col-md-10">: {{ $item->mataPelajaran->mata_pelajaran->nama_mata_pelajaran }}</div>
+                                <div class="col-md-10">: {{ $item->mataPelajaran->nama_mata_pelajaran }}</div>
                             </div>
                             <div class="row">
                                 <div class="col-md-2">Kelas</div>
@@ -41,12 +41,35 @@
                             @csrf
                             @method('PUT')
                             <div class="form-group">
-                                <label for="pokok_bahasan" class="text-dark">Kompetensi Dasar</label>
-                                <input type="text" name="pokok_bahasan" class="form-control @error('pokok_bahasan') is-invalid @enderror" id="pokok_bahasan" placeholder="Masukkan Kompetensi Dasar" value="{{ old('pokok_bahasan', $item->pokok_bahasan) }}" required>
-                                @error('pokok_bahasan')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <label for="topik_pembelajaran" class="text-dark">Topik Pembelajaran</label>
+                                <input type="text" name="topik_pembelajaran"
+                                    class="form-control @error('topik_pembelajaran') is-invalid @enderror"
+                                    id="topik_pembelajaran" placeholder="Masukkan Topik Pembelajaran"
+                                    value="{{ old('topik_pembelajaran', $item->topik_pembelajaran) }}" required>
+                                @error('topik_pembelajaran')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="kegiatan_belajar" class="text-dark">Kegiatan Belajar</label>
+                                <textarea name="kegiatan_belajar" id="kegiatan_belajar" cols="30" rows="10" class="form-control"
+                                    required placeholder="Masukkan Kegiatan Belajar">{{ old('kegiatan_belajar', $item->kegiatan_belajar) }}</textarea>
+                                @error('kegiatan_belajar')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="kendala_belajar" class="text-dark">Kendala Belajar</label>
+                                <textarea name="kendala_belajar" id="kendala_belajar" cols="30" rows="10" class="form-control"
+                                    required placeholder="Masukkan Kendala Belajar">{{ old('kendala_belajar', $item->kendala_belajar) }}</textarea>
+                                @error('kendala_belajar')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                             <button type="submit" class="btn btn-block btn-primary btn-md w-100 mt-3 btn-simpan">Simpan Perubahan</button>

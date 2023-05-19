@@ -46,7 +46,9 @@
                     <th>Mata Pelajaran</th>
                     <th>Kelas</th>
                     <th>Hari, Tanggal</th>
-                    <th>Pokok Bahasan</th>
+                    <th>Topik Pembelajaran</th>
+                    <th>Kegiatan Belajar</th>
+                    <th>Kendala Belajar</th>
                     <th>Total Sakit</th>
                     <th>Total Izin</th>
                     <th>Total Tanpa Keterangan</th>
@@ -57,13 +59,15 @@
                 @forelse ($items as $item)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td>{{ $item->mataPelajaran->mata_pelajaran->nama_mata_pelajaran }}</td>
+                    <td>{{ $item->mataPelajaran->nama_mata_pelajaran }}</td>
                     <td>{{ $item->mataPelajaran->kelas->jenjang }} {{ $item->mataPelajaran->kelas->kelas }}</td>
                     <td>{{ \Carbon\Carbon::parse($item->tanggal)->translatedFormat('l, d F Y') }}</td>
-                    <td>{{ $item->pokok_bahasan }}</td>
-                    <td>{{ $item->hitungStatus('Sakit', $item->mapel_id, $item->pertemuan) }}</td>
-                    <td>{{ $item->hitungStatus('Izin', $item->mapel_id, $item->pertemuan) }}</td>
-                    <td>{{ $item->hitungStatus('Tanpa Keterangan', $item->mapel_id, $item->pertemuan) }}</td>
+                    <td>{{ $item->topik_pembelajaran }}</td>
+                    <td>{{ $item->kegiatan_belajar }}</td>
+                    <td>{{ $item->kendala_belajar }}</td>
+                    <td>{{ $item->hitungStatus('Sakit', $item->mapel_id, $item->tanggal) }}</td>
+                    <td>{{ $item->hitungStatus('Izin', $item->mapel_id, $item->tanggal) }}</td>
+                    <td>{{ $item->hitungStatus('Tanpa Keterangan', $item->mapel_id, $item->tanggal) }}</td>
                     <td>{{ $item->persentaseKehadiran($item->mapel_id) }} %</td>
                 </tr>
                 @empty

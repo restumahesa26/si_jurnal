@@ -23,7 +23,7 @@ class JurnalController extends Controller
 
     public function show(Request $request)
     {
-        $item = Jurnal::where('mapel_id', $request->mapel_id)->where('pertemuan', $request->pertemuan)->first();
+        $item = Jurnal::where('mapel_id', $request->mapel_id)->whereDate('tanggal', $request->tanggal)->first();
 
         if ($item) {
             return view('pages.admin.jurnal.show', compact('item'));
@@ -37,7 +37,9 @@ class JurnalController extends Controller
         $item = Jurnal::findOrFail($id);
 
         $rules = [
-            'pokok_bahasan' => 'required|string',
+            'topik_pembelajaran' => 'required|string',
+            'kegiatan_belajar' => 'required|string',
+            'kendala_belajar' => 'required|string',
         ];
 
         $customMessages = [
@@ -49,7 +51,9 @@ class JurnalController extends Controller
         $this->validate($request, $rules, $customMessages);
 
         $item->update([
-            'pokok_bahasan' => $request->pokok_bahasan,
+            'topik_pembelajaran' => $request->topik_pembelajaran,
+            'kegiatan_belajar' => $request->kegiatan_belajar,
+            'kendala_belajar' => $request->kendala_belajar,
         ]);
 
         return redirect()->route('admin-jurnal.index')->with('success', 'Berhasil Mengubah Jurnal');

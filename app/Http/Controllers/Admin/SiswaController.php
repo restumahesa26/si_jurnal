@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Imports\SiswaImport;
 use App\Models\Siswa;
 use App\Models\WaliSiswa;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class SiswaController extends Controller
 {
@@ -148,5 +150,20 @@ class SiswaController extends Controller
         $item->delete();
 
         return redirect()->route('siswa.index')->with('success', 'Berhasil Menghapus Data Siswa');
+    }
+
+    public function import(Request $request)
+    {
+        $request->validate([
+            'file' => 'required|file|mimes:xlx,xls,xlsx'
+        ]);
+
+        $file = $request->file('file');
+
+        $nama_file = rand().$file->getClientOriginalName();
+        $file->move('file_siswa', $nama_file);
+
+        Excel::import(new SiswaImport, public_path('file_siswa/' . $nama_file));
+        return redirect()->route('siswa.index')->with('success', 'Berhasil Import Data Siswa');
     }
 }

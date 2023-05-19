@@ -21,13 +21,13 @@
                                 <select class="guru w-100" id="mapel_id" name="mapel_id" required>
                                     <option value=""></option>
                                     @foreach ($mapel as $item)
-                                        <option value="{{ $item->id }}" @if(old('mapel_id') == $item->id) selected @endif>{{ $item->mata_pelajaran->nama_mata_pelajaran }} - {{ $item->kelas->jenjang }} {{ $item->kelas->kelas }}</option>
+                                        <option value="{{ $item->id }}" @if(old('mapel_id') == $item->id) selected @endif>{{ $item->nama_mata_pelajaran }} - {{ $item->kelas->jenjang }} {{ $item->kelas->kelas }}</option>
                                     @endforeach
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="pertemuan">Pertemuan</label>
-                                <input type="number" name="pertemuan" id="pertemuan" class="form-control" required value="{{ old('pertemuan') }}" placeholder="Masukkan Pertemuan" autocomplete="off">
+                                <label for="tanggal">Tanggal</label>
+                                <input type="text" name="tanggal" id="tanggal" class="form-control" required placeholder="Masukkan Tanggal" autocomplete="off">
                             </div>
                             <button type="submit" class="btn btn-primary">Ubah Jurnal</button>
                         </form>

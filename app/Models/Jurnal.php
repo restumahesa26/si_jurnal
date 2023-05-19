@@ -20,7 +20,7 @@ class Jurnal extends Model
         return $this->hasOne(MataPelajaran::class, 'id', 'mapel_id');
     }
 
-    public function hitungStatus($status, $mapel_id, $pertemuan)
+    public function hitungStatus($status, $mapel_id, $tanggal)
     {
         $tahunAjaran = TahunAjaran::where('status', 'Aktif')->first();
 
@@ -31,7 +31,7 @@ class Jurnal extends Model
         ->where('absen.mapel_id', $mapel_id)
         ->where('absen.status', $status)
         ->where('kelas.tahun_ajaran_id', $tahunAjaran->id)
-        ->where('jurnal.pertemuan', $pertemuan)
+        ->whereDate('absen.tanggal', $tanggal)
         ->count();
 
         return $count;

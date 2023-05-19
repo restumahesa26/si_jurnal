@@ -7,8 +7,8 @@
 }
 
 .u-section-1 .u-image-1 {
-  width: 860px;
-  height: 860px;
+  width: 550px;
+  height: 550px;
   background-image: url("images/bbvv.jpg");
   background-position: 50% 50%;
   --animation-custom_in-translate_x: -300px;
@@ -16,7 +16,7 @@
   --animation-custom_in-opacity: 0;
   --animation-custom_in-rotate: 0deg;
   --animation-custom_in-scale: 1;
-  margin: 90px auto 0 0;
+  margin: 50px auto 0 0;
 }
 
 .u-section-1 .u-group-1 {
@@ -1902,19 +1902,19 @@
 .u-container-layout.hover .u-section-4 .u-btn-1 {
   transform: rotate(0deg) scale(1) translateX(0px) translateY(0px) !important;
 } .u-section-5 {
-  min-height: 1121px;
+  min-height: 600px;
 }
 
 .u-section-5 .u-shape-1 {
-  height: 616px;
+  height: 200px;
   background-image: none;
   margin-top: 0;
   margin-bottom: 0;
 }
 
 .u-section-5 .u-image-1 {
-  width: 883px;
-  height: 883px;
+  width: 600px;
+  height: 600px;
   object-position: 0% 50%;
   background-image: url("images/jhj.jpg");
   background-position: 50% 50%;
@@ -1923,7 +1923,7 @@
   --animation-custom_in-opacity: 0;
   --animation-custom_in-rotate: 0deg;
   --animation-custom_in-scale: 1;
-  margin: -522px calc(((100% - 1140px) / 2)) 0 auto;
+  margin: -260px calc(((100% - 1140px) / 2)) 0 auto;
 }
 
 .u-section-5 .u-group-1 {

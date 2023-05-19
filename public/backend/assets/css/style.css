@@ -3524,21 +3524,21 @@ pre {
     -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
   .form-control::-webkit-input-placeholder, .select2-container--default .select2-selection--single::-webkit-input-placeholder, .select2-container--default .select2-selection--single .select2-search__field::-webkit-input-placeholder, .typeahead::-webkit-input-placeholder, .tt-query::-webkit-input-placeholder, .tt-hint::-webkit-input-placeholder {
-    color: #332FD0;
+    color: #146C94;
     opacity: 1; }
   .form-control::-moz-placeholder, .select2-container--default .select2-selection--single::-moz-placeholder, .select2-container--default .select2-selection--single .select2-search__field::-moz-placeholder, .typeahead::-moz-placeholder, .tt-query::-moz-placeholder, .tt-hint::-moz-placeholder {
-    color: #332FD0;
+    color: #146C94;
     opacity: 1; }
   .form-control:-ms-input-placeholder, .select2-container--default .select2-selection--single:-ms-input-placeholder, .select2-container--default .select2-selection--single .select2-search__field:-ms-input-placeholder, .typeahead:-ms-input-placeholder, .tt-query:-ms-input-placeholder, .tt-hint:-ms-input-placeholder {
-    color: #332FD0;
+    color: #146C94;
     opacity: 1; }
   .form-control::-ms-input-placeholder, .select2-container--default .select2-selection--single::-ms-input-placeholder, .select2-container--default .select2-selection--single .select2-search__field::-ms-input-placeholder, .typeahead::-ms-input-placeholder, .tt-query::-ms-input-placeholder, .tt-hint::-ms-input-placeholder {
-    color: #332FD0;
+    color: #146C94;
     opacity: 1; }
   .form-control::placeholder, .select2-container--default .select2-selection--single::placeholder, .select2-container--default .select2-selection--single .select2-search__field::placeholder, .typeahead::placeholder,
   .tt-query::placeholder,
   .tt-hint::placeholder {
-    color: #332FD0;
+    color: #146C94;
     opacity: 1; }
   .form-control:disabled, .select2-container--default .select2-selection--single:disabled, .select2-container--default .select2-selection--single .select2-search__field:disabled, .typeahead:disabled,
   .tt-query:disabled,
@@ -12495,14 +12495,14 @@ code {
 
 .input-group-append,
 .input-group-prepend {
-  color: #332FD0;
+  color: #146C94;
   width: auto;
   border: none; }
   .input-group-append .input-group-text,
   .input-group-prepend .input-group-text {
     border-color: rgba(151, 151, 151, 0.3);
     padding: 0.94rem 0.5rem 0.94rem 1rem;
-    color: #332FD0; }
+    color: #146C94; }
     .rtl .input-group-append .input-group-text, .rtl
     .input-group-prepend .input-group-text {
       padding: 0.94rem 1rem 0.94rem 0.5rem; }
@@ -12520,7 +12520,7 @@ select.tt-hint {
   padding: .4375rem .75rem;
   border: 0;
   outline: 1px solid rgba(151, 151, 151, 0.3);
-  color: #332FD0; }
+  color: #146C94; }
   select.form-control:focus, .select2-container--default select.select2-selection--single:focus, .select2-container--default .select2-selection--single select.select2-search__field:focus, select.typeahead:focus,
   select.tt-query:focus,
   select.tt-hint:focus {
@@ -12916,7 +12916,7 @@ dl {
 .auth .auth-form-light {
   background: #ffffff; }
   .auth .auth-form-light select {
-    color: #332FD0; }
+    color: #146C94; }
   .auth .auth-form-light .input-group .form-control:focus, .auth .auth-form-light .input-group .select2-container--default .select2-selection--single:focus, .select2-container--default .auth .auth-form-light .input-group .select2-selection--single:focus, .auth .auth-form-light .input-group .select2-container--default .select2-selection--single .select2-search__field:focus, .select2-container--default .select2-selection--single .auth .auth-form-light .input-group .select2-search__field:focus, .auth .auth-form-light .input-group .typeahead:focus,
   .auth .auth-form-light .input-group .tt-query:focus,
   .auth .auth-form-light .input-group .tt-hint:focus, .auth .auth-form-light .input-group .form-control:active, .auth .auth-form-light .input-group .select2-container--default .select2-selection--single:active, .select2-container--default .auth .auth-form-light .input-group .select2-selection--single:active, .auth .auth-form-light .input-group .select2-container--default .select2-selection--single .select2-search__field:active, .select2-container--default .select2-selection--single .auth .auth-form-light .input-group .select2-search__field:active, .auth .auth-form-light .input-group .typeahead:active,
@@ -13088,7 +13088,7 @@ dl {
     -webkit-transition: width 0.25s ease, background 0.25s ease;
     -moz-transition: width 0.25s ease, background 0.25s ease;
     -ms-transition: width 0.25s ease, background 0.25s ease;
-    background: #332FD0;
+    background: #146C94;
     width: 258px;
     height: 64px; }
     @media (max-width: 991px) {
@@ -13490,7 +13490,7 @@ dl {
 /* Sidebar */
 .sidebar {
   min-height: calc(100vh - 64px);
-  background: #332FD0;
+  background: #146C94;
   font-family: "nunito-medium", sans-serif;
   padding: 0;
   width: 258px;
