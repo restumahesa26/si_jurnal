@@ -2142,7 +2142,7 @@
 .u-section-6 .u-social-icons-2 {
   height: 85px;
   min-height: 16px;
-  width: 85px;
+  width: auto;
   min-width: 16px;
   --animation-custom_in-translate_x: 0px;
   --animation-custom_in-translate_y: 0px;

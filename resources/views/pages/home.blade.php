@@ -22,7 +22,7 @@
             "@context": "http://schema.org",
             "@type": "Organization",
             "name": "",
-            "logo": "{{ url('frontend/logo.png') }}"
+            "logo": "{{ url('logo_1.jpg') }}"
         }
     </script>
     <meta name="theme-color" content="#4551dd">
@@ -34,7 +34,7 @@
     <header class="u-clearfix u-header u-header" id="sec-fe69">
         <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
             <a href="https://nicepage.com" class="u-image u-logo u-image-1">
-                <img src="{{ url('frontend/logo.png') }}" class="u-logo-image u-logo-image-1">
+                <img src="{{ url('logo_1.jpg') }}" class="u-logo-image u-logo-image-1">
             </a>
             <nav class="u-menu u-menu-hamburger u-offcanvas u-menu-1" data-responsive-from="XL">
                 <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700;">
@@ -246,7 +246,7 @@
                                             data-animation-name="customAnimationIn" data-animation-duration="1500">
                                             <a class="u-social-url" title="twitter" target="_blank"
                                                 href="https://twitter.com/name"><span
-                                                    class="u-icon u-social-icon u-social-twitter u-text-palette-1-base u-icon-1"><img src="{{ url('a.png') }}" alt=""></span>
+                                                    class="u-icon u-social-icon u-social-twitter u-text-palette-1-base u-icon-1"><img src="{{ url('logo_1.jpg') }}" alt=""></span>
                                             </a>
                                         </div>
                                     </div>
@@ -262,7 +262,7 @@
                                             data-animation-name="customAnimationIn" data-animation-duration="1500">
                                             <a class="u-social-url" title="twitter" target="_blank"
                                                 href="https://twitter.com/name"><span
-                                                    class="u-icon u-social-icon u-social-twitter u-text-palette-1-base u-icon-2"><img src="{{ url('a.png') }}" alt=""></span>
+                                                    class="u-icon u-social-icon u-social-twitter u-text-palette-1-base u-icon-2"><img src="{{ url('logo_1.jpg') }}" alt=""></span>
                                             </a>
                                         </div>
                                     </div>
@@ -271,7 +271,7 @@
                                     class="u-container-align-right-sm u-container-align-right-xs u-container-style u-layout-cell u-size-14 u-layout-cell-5">
                                     <div class="u-container-layout u-valign-middle u-container-layout-5">
                                         <img class="u-border-8 u-border-palette-2-base u-image u-image-circle u-image-2"
-                                            src="images/a7c767cf-3a26-4f01-874d-14261d2c39a7.jpg" alt=""
+                                            src="{{ url('profil.jpg') }}" alt=""
                                             data-image-width="1619" data-image-height="1080"
                                             data-animation-name="customAnimationIn" data-animation-duration="1500"
                                             data-animation-delay="250">
@@ -318,7 +318,7 @@
                                             data-animation-name="customAnimationIn" data-animation-duration="1500">
                                             <a class="u-social-url" title="twitter" target="_blank"
                                                 href="https://twitter.com/name"><span
-                                                    class="u-icon u-social-icon u-social-twitter u-text-palette-1-base u-icon-1"><img src="{{ url('a.png') }}" alt=""></span>
+                                                    class="u-icon u-social-icon u-social-twitter u-text-palette-1-base u-icon-1"><img src="{{ url('logo_1.jpg') }}" alt=""></span>
                                             </a>
                                         </div>
                                     </div>
@@ -334,7 +334,7 @@
                                             data-animation-name="customAnimationIn" data-animation-duration="1500">
                                             <a class="u-social-url" title="twitter" target="_blank"
                                                 href="https://twitter.com/name"><span
-                                                    class="u-icon u-social-icon u-social-twitter u-text-palette-1-base u-icon-2"><img src="{{ url('a.png') }}" alt=""></span>
+                                                    class="u-icon u-social-icon u-social-twitter u-text-palette-1-base u-icon-2"><img src="{{ url('logo_1.jpg') }}" alt=""></span>
                                             </a>
                                         </div>
                                     </div>
@@ -390,7 +390,7 @@
                                             data-animation-name="customAnimationIn" data-animation-duration="1500">
                                             <a class="u-social-url" title="twitter" target="_blank"
                                                 href="https://twitter.com/name"><span
-                                                    class="u-icon u-social-icon u-social-twitter u-text-palette-1-base u-icon-1"><img src="{{ url('a.png') }}" alt=""></span>
+                                                    class="u-icon u-social-icon u-social-twitter u-text-palette-1-base u-icon-1"><img src="{{ url('logo_1.jpg') }}" alt=""></span>
                                             </a>
                                         </div>
                                     </div>
@@ -406,7 +406,7 @@
                                             data-animation-name="customAnimationIn" data-animation-duration="1500">
                                             <a class="u-social-url" title="twitter" target="_blank"
                                                 href="https://twitter.com/name"><span
-                                                    class="u-icon u-social-icon u-social-twitter u-text-palette-1-base u-icon-2"><img src="{{ url('a.png') }}" alt=""></span>
+                                                    class="u-icon u-social-icon u-social-twitter u-text-palette-1-base u-icon-2"><img src="{{ url('logo_1.jpg') }}" alt=""></span>
                                             </a>
                                         </div>
                                     </div>
@@ -462,7 +462,7 @@
                                             data-animation-name="customAnimationIn" data-animation-duration="1500">
                                             <a class="u-social-url" title="twitter" target="_blank"
                                                 href="https://twitter.com/name"><span
-                                                    class="u-icon u-social-icon u-social-twitter u-text-palette-1-base u-icon-1"><img src="{{ url('a.png') }}" alt=""></span>
+                                                    class="u-icon u-social-icon u-social-twitter u-text-palette-1-base u-icon-1"><img src="{{ url('logo_1.jpg') }}" alt=""></span>
                                             </a>
                                         </div>
                                     </div>

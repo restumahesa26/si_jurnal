@@ -7,11 +7,11 @@
 @section('content')
 <div class="row">
     <div class="col-sm-12">
-        <a href="{{ route('kepala-sekolah.index') }}" class="btn btn-warning btn-rounded text-white">Kembali</a>
+        <a href="{{ route('waka-kurikulum.index') }}" class="btn btn-warning btn-rounded text-white">Kembali</a>
         <div class="card mt-3">
             <div class="card-body">
                 <h4 class="card-title">Tambah Data Wakil Kepala Kurikulum</h4>
-                <form class="forms-sample" action="{{ route('kepala-sekolah.store') }}" method="POST">
+                <form class="forms-sample" action="{{ route('waka-kurikulum.store') }}" method="POST">
                     @csrf
                     <div class="form-group">
                         <label for="nama" class="text-dark">Nama</label>
