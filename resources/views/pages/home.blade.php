@@ -233,7 +233,7 @@
                                     class="u-container-align-left-sm u-container-align-left-xs u-container-style u-layout-cell u-size-14 u-layout-cell-2">
                                     <div class="u-container-layout u-valign-middle u-container-layout-2">
                                         <img class="u-border-8 u-border-palette-2-base u-image u-image-circle u-image-1"
-                                            src="images/758b5559-c3ba-4155-a732-78d6fab8bfcd.jpg" alt=""
+                                            src="{{ url('photo/pak paidi.png') }}" alt=""
                                             data-image-width="1500" data-image-height="1000"
                                             data-animation-name="customAnimationIn" data-animation-duration="1500"
                                             data-animation-delay="0">
@@ -305,7 +305,7 @@
                                     class="u-container-align-left-sm u-container-align-left-xs u-container-style u-layout-cell u-size-14 u-layout-cell-2">
                                     <div class="u-container-layout u-valign-middle u-container-layout-2">
                                         <img class="u-border-8 u-border-palette-2-base u-image u-image-circle u-image-1"
-                                            src="images/758b5559-c3ba-4155-a732-78d6fab8bfcd.jpg" alt=""
+                                            src="{{ url('photo/Wetsi.png') }}" alt=""
                                             data-image-width="1500" data-image-height="1000"
                                             data-animation-name="customAnimationIn" data-animation-duration="1500"
                                             data-animation-delay="0">
@@ -342,8 +342,8 @@
                                 <div
                                     class="u-container-align-right-sm u-container-align-right-xs u-container-style u-layout-cell u-size-14 u-layout-cell-5">
                                     <div class="u-container-layout u-valign-middle u-container-layout-5">
-                                        <img class="u-border-8 u-border-palette-2-base u-image u-image-circle u-image-2"
-                                            src="images/a7c767cf-3a26-4f01-874d-14261d2c39a7.jpg" alt=""
+                                        <img class="u-border-8 u-border-palette-2-base u-image u-image-circle u-image-1"
+                                            src="{{ url('photo/pak hafidh zaini.png') }}" alt=""
                                             data-image-width="1619" data-image-height="1080"
                                             data-animation-name="customAnimationIn" data-animation-duration="1500"
                                             data-animation-delay="250">
@@ -377,7 +377,7 @@
                                     class="u-container-align-left-sm u-container-align-left-xs u-container-style u-layout-cell u-size-14 u-layout-cell-2">
                                     <div class="u-container-layout u-valign-middle u-container-layout-2">
                                         <img class="u-border-8 u-border-palette-2-base u-image u-image-circle u-image-1"
-                                            src="images/758b5559-c3ba-4155-a732-78d6fab8bfcd.jpg" alt=""
+                                            src="{{ url('photo/nursahid.png') }}" alt=""
                                             data-image-width="1500" data-image-height="1000"
                                             data-animation-name="customAnimationIn" data-animation-duration="1500"
                                             data-animation-delay="0">
@@ -414,8 +414,8 @@
                                 <div
                                     class="u-container-align-right-sm u-container-align-right-xs u-container-style u-layout-cell u-size-14 u-layout-cell-5">
                                     <div class="u-container-layout u-valign-middle u-container-layout-5">
-                                        <img class="u-border-8 u-border-palette-2-base u-image u-image-circle u-image-2"
-                                            src="images/a7c767cf-3a26-4f01-874d-14261d2c39a7.jpg" alt=""
+                                        <img class="u-border-8 u-border-palette-2-base u-image u-image-circle u-image-1"
+                                            src="{{ url('photo/Selvi.png') }}" alt=""
                                             data-image-width="1619" data-image-height="1080"
                                             data-animation-name="customAnimationIn" data-animation-duration="1500"
                                             data-animation-delay="250">
@@ -449,7 +449,7 @@
                                     class="u-container-align-left-sm u-container-align-left-xs u-container-style u-layout-cell u-size-14 u-layout-cell-2">
                                     <div class="u-container-layout u-valign-middle u-container-layout-2">
                                         <img class="u-border-8 u-border-palette-2-base u-image u-image-circle u-image-1"
-                                            src="images/758b5559-c3ba-4155-a732-78d6fab8bfcd.jpg" alt=""
+                                            src="{{ url('photo/pak eko.png') }}" alt=""
                                             data-image-width="1500" data-image-height="1000"
                                             data-animation-name="customAnimationIn" data-animation-duration="1500"
                                             data-animation-delay="0">

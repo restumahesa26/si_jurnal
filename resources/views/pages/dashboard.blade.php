@@ -55,7 +55,7 @@
                 <div class="card-title">Kelas : {{ $item->jenjang }} {{ $item->kelas }}</div>
                 <h5 class="text-dark">Jumlah Siswa {{ $item->totalSiswa($item->id) }} orang</h5>
                 <h5 class="text-dark">Wali Kelas : {{ $item->waliKelas->user->nama }}</h5>
-                <a href="{{ route('dashboard.show-absen-kelas', $item->id) }}" class="btn btn-primary">Lihar Rekap Absen</a>
+                <a href="{{ route('dashboard.show-absen-kelas', $item->id) }}" class="btn btn-primary">Lihat Rekap Absen</a>
             </div>
         </div>
     </div>
@@ -81,7 +81,7 @@
                 <div class="card-title">{{ $item->nama_mata_pelajaran }} <br>Kelas : {{ $item->kelas->jenjang }} {{ $item->kelas->kelas }}</div>
                 <h5 class="text-dark">Jumlah Siswa {{ $item->kelas->totalSiswa($item->id) }} orang</h5>
                 <h5 class="text-dark">Wali Kelas : {{ $item->kelas->waliKelas->user->nama }}</h5>
-                <a href="{{ route('dashboard.show-absen-kelas', $item->id) }}" class="btn btn-primary">Lihar Rekap Absen</a>
+                <a href="{{ route('dashboard.show-absen-kelas', $item->id) }}" class="btn btn-primary">Lihat Rekap Absen</a>
             </div>
         </div>
     </div>
@@ -107,7 +107,7 @@
                 <div class="card-title">Kelas : {{ $item->jenjang }} {{ $item->kelas }}</div>
                 <h5 class="text-dark">Jumlah Siswa {{ $item->totalSiswa($item->id) }} orang</h5>
                 <h5 class="text-dark">Wali Kelas : {{ $item->waliKelas->user->nama }}</h5>
-                <a href="{{ route('dashboard.show-absen-kelas', $item->id) }}" class="btn btn-primary">Lihar Rekap Absen</a>
+                <a href="{{ route('dashboard.show-absen-kelas', $item->id) }}" class="btn btn-primary">Lihat Rekap Absen</a>
             </div>
         </div>
     </div>

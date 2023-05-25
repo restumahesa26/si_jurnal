@@ -4,6 +4,7 @@
 /storage/*.key
 /vendor
 .env.backup
+.public/file_siswa
 .phpunit.result.cache
 docker-compose.override.yml
 Homestead.json
