@@ -34,13 +34,6 @@
                                     <td>{{ $item->guruPengampu->user->nama }}</td>
                                     <td>
                                         <a href="{{ route('mata-pelajaran.edit', $item->id) }}" class="btn btn-sm btn-primary">Edit</a>
-                                        @if ($item->absen_count < 1)
-                                        <form action="{{ route('mata-pelajaran.destroy', $item->id) }}" method="POST" class="d-inline">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="btn btn-sm btn-danger btn-hapus">Hapus</button>
-                                        </form>
-                                        @endif
                                     </td>
                                 </tr>
                                 @empty

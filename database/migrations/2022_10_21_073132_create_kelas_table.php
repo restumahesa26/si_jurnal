@@ -16,9 +16,9 @@ class CreateKelasTable extends Migration
         Schema::create('kelas', function (Blueprint $table) {
             $table->id();
             $table->foreignId('tahun_ajaran_id')->references('id')->on('tahun_ajaran');
-            $table->string('kelas');
-            $table->string('jenjang');
-            $table->string('wali_kelas');
+            $table->string('kelas', 50);
+            $table->string('jenjang', 50);
+            $table->string('wali_kelas', 18);
             $table->foreign('wali_kelas')->references('nip')->on('guru')->onUpdate('cascade');
             $table->timestamps();
         });

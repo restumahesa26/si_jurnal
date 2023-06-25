@@ -16,7 +16,7 @@ class CreateKelasSiswaTable extends Migration
         Schema::create('kelas_siswa', function (Blueprint $table) {
             $table->id();
             $table->foreignId('kelas_id')->references('id')->on('kelas');
-            $table->string('nis');
+            $table->string('nis', 9);
             $table->foreign('nis')->references('nis')->on('siswa')->onUpdate('cascade');
             $table->timestamps();
         });

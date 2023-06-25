@@ -14,8 +14,8 @@ class CreateSiswaTable extends Migration
     public function up()
     {
         Schema::create('siswa', function (Blueprint $table) {
-            $table->string('nis')->primary();
-            $table->string('nama');
+            $table->string('nis', 9)->primary();
+            $table->string('nama', 50);
             $table->enum('jenis_kelamin', ['L', 'P']);
             $table->timestamps();
         });

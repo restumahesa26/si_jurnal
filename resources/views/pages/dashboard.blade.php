@@ -97,6 +97,25 @@
     </div>
     @endforelse
 </div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-dark" id="exampleModalLabel">Notifikasi</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h4 class="text-dark">Harap Isi Absensi dan Jurnal Untuk Hari Ini</h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
 @elseif (Auth::user()->role == 'Waka-Kurikulum')
 <div class="row">
     @forelse ($semuaMapel as $item)
@@ -138,5 +157,12 @@
             timer: 1500
         })
     </script>
+@endif
+@if (Auth::user()->role == 'Guru')
+@if (App\Helpers\Helper::checkAbsen(Auth::user()->guru->nip))
+<script>
+    $('#exampleModal').modal('show');
+</script>
+@endif
 @endif
 @endpush

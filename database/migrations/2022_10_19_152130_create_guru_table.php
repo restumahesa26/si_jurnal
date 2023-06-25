@@ -14,12 +14,12 @@ class CreateGuruTable extends Migration
     public function up()
     {
         Schema::create('guru', function (Blueprint $table) {
-            $table->string('nip')->primary();
+            $table->string('nip', 18)->primary();
             $table->foreignId('user_id')->references('id')->on('users');
             $table->enum('jenis_kelamin', ['L', 'P']);
-            $table->string('pangkat')->nullable();
-            $table->string('golongan')->nullable();
-            $table->string('jabatan')->nullable();
+            $table->string('pangkat', 50)->nullable();
+            $table->string('golongan', 50)->nullable();
+            $table->string('jabatan', 50)->nullable();
             $table->timestamps();
         });
     }
